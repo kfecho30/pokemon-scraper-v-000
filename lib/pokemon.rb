@@ -1,6 +1,6 @@
 class Pokemon
   attr_accessor :id, :name, :type, :db
-  def initialize(name = nil, type = nil, db = nil)
+  def initialize(name = nil, type = nil, db = "")
     @name = name,
     @type = type,
     database_connection = SQLite3::Database.new(db)
