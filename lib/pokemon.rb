@@ -3,7 +3,7 @@ class Pokemon
   def initialize(name = nil, type = nil, db = nil)
     @name = name,
     @type = type,
-    @db = db
+    database_connection = SQLite3::Database.new(db)
   end
 
   def self.save(id, name, type)
